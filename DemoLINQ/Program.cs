@@ -69,6 +69,23 @@ namespace DemoLINQ
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Ordering Operators [OrderByAsc , OrderByDescending , ThenBy , ThenByDescending , Reverse]
+            // Get Products Ordered by UnitPrice Ascending
+            //var result = ProductsList.OrderBy(p => p.UnitPrice);
+            ////*****************************
+            // Get Products Ordered by UnitPrice Descending 
+            //var result = ProductsList.OrderByDescending(p => p.UnitPrice);
+            //// Query Syntax 
+            //result = from p in ProductsList
+            //         orderby p.UnitPrice descending
+            //         select p;
+
+            ////*****************************
+            //// Get Products order by Price Asc and Number of items in stock 
+           var result = ProductsList.OrderBy(p => p.UnitPrice)
+                                     .ThenByDescending(p => p.UnitsInStock);
+
+            #endregion
             #endregion
         }
     }
