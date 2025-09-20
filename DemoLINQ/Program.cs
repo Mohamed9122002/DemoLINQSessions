@@ -205,7 +205,34 @@ namespace DemoLINQ
             //var result = products01.ExceptBy(products02.Select(p => p.ProductID), p => p.ProductID);
 
             #endregion
+            #region  Quantifier Operators[any ,all contains]  return boolean 
+            //Console.WriteLine(ProductsList.Any());
+            //Console.WriteLine(ProductsList.All(p=>p.UnitsInStock  == 0));
+            //var products01 = new List<Product>()
+            //{
+            //    new Product() {ProductID = 1, ProductName = "Chai", Category = "Beverages",
+            //                UnitPrice = 18.00M, UnitsInStock = 100},
+            //            new Product{ ProductID = 2, ProductName = "Chang", Category = "Beverages",
+            //            UnitPrice = 19.0000M, UnitsInStock = 17 },
+            //          new Product{ ProductID = 3, ProductName = "Aniseed Syrup", Category = "Condiments",
+            //            UnitPrice = 10.0000M, UnitsInStock = 13 },
+            //          new Product{ ProductID = 4, ProductName = "Chef Anton's Cajun Seasoning", Category = "Condiments",
+            //            UnitPrice = 22.0000M, UnitsInStock = 53 },
+            //          new Product{ ProductID = 5, ProductName = "Chef Anton's Gumbo Mix", Category = "Condiments",
+            //            UnitPrice = 21.3500M, UnitsInStock = 0 },
+            //};
+            //Product pr = new Product
+            //{
+            //    ProductID = 4,
+            //    ProductName = "Chef Anton's Cajun Seasoning",
+            //    Category = "Condiments",
+            //    UnitPrice = 22.0000M,
+            //    UnitsInStock = 53
+            //};
+            //Console.WriteLine(products01.Contains(pr));
+            // second overload of Contains method provide IEqualityComparer<Product>
 
+            #endregion
             #endregion
         }
     }
