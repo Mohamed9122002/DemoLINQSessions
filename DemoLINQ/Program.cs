@@ -233,6 +233,24 @@ namespace DemoLINQ
             // second overload of Contains method provide IEqualityComparer<Product>
 
             #endregion
+
+            #region Let ,into 
+            //var result = from p in ProductsList
+            //             let disPrice = p.UnitPrice * 0.1m
+            //             where disPrice < 10
+            //             select new
+            //             {
+            //                 p.ProductName,
+            //                 p.UnitPrice,
+            //                 PriceAfterDiscount = disPrice
+            //             };
+            //// into restert the query 
+            //var result01 = from p in ProductsList 
+            //               select p.UnitPrice *0.9m
+            //               into disPrice
+            //               where disPrice < 10
+            //               select disPrice;
+            #endregion
             #endregion
         }
     }
