@@ -1,4 +1,5 @@
-﻿using static DemoLINQ.ListGenerator;
+﻿using System.Collections.Immutable;
+using static DemoLINQ.ListGenerator;
 namespace DemoLINQ
 {
     internal class Program
@@ -130,6 +131,31 @@ namespace DemoLINQ
             //Console.WriteLine(result);
             #endregion
 
+            #endregion
+
+            #region  Casting Operators - Immediate Execution 
+            //List<Product> result  = ProductsList.Where(p => p.UnitsInStock == 0).ToList(); // casting to List 
+            //Product[] array = ProductsList.Where(p => p.UnitsInStock == 0).ToArray(); // casting to array 
+            //Dictionary<long, Product> dictionary = ProductsList.Where(p => p.UnitsInStock == 0)
+            //                                                     .ToDictionary(p => p.ProductID); // casting to Dictionary
+            //Dictionary<long, string> dictionary1 = ProductsList.Where(p => p.UnitsInStock == 0)
+            //                                                .ToDictionary(p => p.ProductID,p=>p.ProductName); // casting to Dictionary
+            //foreach (var item in dictionary)
+            //{
+            //    Console.WriteLine(item.Key);
+            //    Console.WriteLine(item.Value);
+            //}
+            /***/
+            // Comparer the Default Equality Comparer  object to object 
+
+            //HashSet<Product> hashSet = ProductsList.Where(p => p.UnitsInStock == 0)
+            //                                     .ToHashSet(); // casting to HashSet
+            //var hastset = ProductsList.Where(p => p.UnitsInStock == 0)
+            //                         .ToImmutableHashSet(); // casting to HashSet Immutable ,to orderby 
+            //foreach (var item in hashSet)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
             #endregion
         }
