@@ -20,6 +20,21 @@ namespace DemoLINQ.Data
             return this.UnitPrice.CompareTo(other.UnitPrice);
         }
 
+        public override bool Equals(object? obj)
+        {
+            return obj is Product product &&
+                   ProductID == product.ProductID &&
+                   ProductName == product.ProductName &&
+                   Category == product.Category &&
+                   UnitPrice == product.UnitPrice &&
+                   UnitsInStock == product.UnitsInStock;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(ProductID, ProductName, Category, UnitPrice, UnitsInStock);
+        }
+
         public override string ToString()
             => $"ProductID:{ProductID},ProductName:{ProductName},Category{Category},UnitPrice:{UnitPrice},UnitsInStock:{UnitsInStock}";
 

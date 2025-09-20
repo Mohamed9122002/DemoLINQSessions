@@ -164,6 +164,48 @@ namespace DemoLINQ
             //// Generate sequence of Empty 
             //var result = Enumerable.Empty<Product>().ToArray();
             #endregion
+            #region  Set Operators 
+            //var Nubmers01 = Enumerable.Range(0,100);
+            //var Nubmers02 = Enumerable.Range(50, 100);
+            //var result = Nubmers01.Union(Nubmers02); // distinct numbers from both sequences
+            //result = Nubmers01.Concat(Nubmers02); // all numbers from both sequences remove duplicates
+            //result = Nubmers01.Distinct(); // distinct numbers from single sequence
+            //result  = Nubmers01.Intersect(Nubmers02); // common numbers in both sequences
+            //result = Nubmers01.Except(Nubmers02); // numbers in first sequence not in second sequence
+            /***************************************************/
+            //var products01 = new List<Product>()
+            //{
+            //    new Product() {ProductID = 1, ProductName = "Chai", Category = "Beverages",
+            //                UnitPrice = 18.00M, UnitsInStock = 100},
+            //            new Product{ ProductID = 2, ProductName = "Chang", Category = "Beverages",
+            //            UnitPrice = 19.0000M, UnitsInStock = 17 },
+            //          new Product{ ProductID = 3, ProductName = "Aniseed Syrup", Category = "Condiments",
+            //            UnitPrice = 10.0000M, UnitsInStock = 13 },
+            //          new Product{ ProductID = 4, ProductName = "Chef Anton's Cajun Seasoning", Category = "Condiments",
+            //            UnitPrice = 22.0000M, UnitsInStock = 53 },
+            //          new Product{ ProductID = 5, ProductName = "Chef Anton's Gumbo Mix", Category = "Condiments",
+            //            UnitPrice = 21.3500M, UnitsInStock = 0 },
+            //};
+            //var products02 = new List<Product>() {
+
+            //    new Product() {ProductID = 1, ProductName = "Chai", Category = "Beverages",
+            //                UnitPrice = 18.00M, UnitsInStock = 100},
+            //            new Product{ ProductID = 2, ProductName = "Chang", Category = "Beverages",
+            //            UnitPrice = 19.0000M, UnitsInStock = 17 },
+            //          new Product{ ProductID = 4, ProductName = "Chef Anton's Cajun Seasoning", Category = "Condiments",
+            //            UnitPrice = 22.0000M, UnitsInStock = 53 },
+            //};
+            //var result = products01.Union(products02);
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //var result = products01.UnionBy(products02,p=>p.ProductName); 
+            //var result = products01.IntersectBy(products02.Select(p => p.ProductID), p => p.ProductID);
+            //var result = products01.ExceptBy(products02.Select(p => p.ProductID), p => p.ProductID);
+
+            #endregion
+
             #endregion
         }
     }
