@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoLINQ.Data
 {
-    class Product /*: IComparable<Product>*/
+    class Product : IComparable<Product>
     {
         public long ProductID { get; set; }
         public string ProductName { get; set; }
@@ -14,10 +14,11 @@ namespace DemoLINQ.Data
         public decimal UnitPrice { get; set; }
         public int UnitsInStock { get; set; }
 
-        //public int CompareTo(Product? other)
-        //{
-        //    return this.UnitPrice.CompareTo(other?.UnitPrice);
-        //}
+        public int CompareTo(Product? other)
+        {
+            if (other is null) return 1;
+            return this.UnitPrice.CompareTo(other.UnitPrice);
+        }
 
         public override string ToString()
             => $"ProductID:{ProductID},ProductName:{ProductName},Category{Category},UnitPrice:{UnitPrice},UnitsInStock:{UnitsInStock}";

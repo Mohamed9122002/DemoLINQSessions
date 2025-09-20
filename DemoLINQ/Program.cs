@@ -109,7 +109,26 @@ namespace DemoLINQ
             // if sequence contains no element match condition => return default value Null
             // if sequence contains more than one element match condition => throw exception
             // if sequence contains only one element match condition => return the element
-
+            #endregion
+            #region Aggregate Operators - Immediate Ececution
+            #region Count 
+            //var result = ProductsList.Count(); // linq Method 
+            //result = ProductsList.Count;// property of List<T>
+            //var result = ProductsList.Count(p => p.UnitsInStock == 0); // linq Method
+            //bool productTryGetCount = ProductsList.TryGetNonEnumeratedCount(out result);
+            #endregion
+            #region Max , Min 
+            //var result = ProductsList.Max();
+            //Console.WriteLine(result);
+            //var result = ProductsList.Max(p => p.UnitPrice);
+            //var MinLengthProductName = ProductsList.Min(p => p.ProductName);
+            //var Re = (from p in ProductsList
+            //          where p.ProductName == MinLengthProductName
+            //          select p).FirstOrDefault();
+            /********************************************************/
+            //var result = ProductsList.MinBy(P => P.ProductName); // .NET 6.0 
+            //Console.WriteLine(result);
+            #endregion
 
             #endregion
             #endregion
