@@ -157,6 +157,13 @@ namespace DemoLINQ
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Generation Operators [valid only with Method Syntax]
+            // The only way to call them is as static Methods of Enumerable class
+            //var result = Enumerable.Range(10, 20); // generate sequence of integers start from 10 count 20 numbers
+            //var products = Enumerable.Repeat(new Product() { Category = "Meat" }, 100);
+            //// Generate sequence of Empty 
+            //var result = Enumerable.Empty<Product>().ToArray();
+            #endregion
             #endregion
         }
     }
