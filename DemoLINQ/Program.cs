@@ -82,8 +82,34 @@ namespace DemoLINQ
 
             ////*****************************
             //// Get Products order by Price Asc and Number of items in stock 
-           var result = ProductsList.OrderBy(p => p.UnitPrice)
-                                     .ThenByDescending(p => p.UnitsInStock);
+            //var result = ProductsList.OrderBy(p => p.UnitPrice)
+            //                          .ThenByDescending(p => p.UnitsInStock);
+
+            #endregion
+            #region Element Operator - Immediate Execution [Valid only With Fluent Syntax]
+            //var firstProduct = ProductsList.First(); // get first element at sequence 
+            // First and last May bw Throw Exception -> Will Exception if the sequence is empty
+            /***********************************************************************************/
+            //var result = ProductsList.FirstOrDefault();
+            // FirstOrDefault and LastOrDefault will not throw Exception if the sequence is empty return default value
+            // second overload of FirstOrDefault and LastOrDefault
+            ////if there is no matching element => return default value Null 
+            //var result = ProductsList.LastOrDefault(p=>p.UnitsInStock>0);
+            /*************************************************/
+            //var result = ProductsList.ElementAt(0);
+            //Console.WriteLine(result); // element at => exception if index is out of range
+            //var result = ProductsList.ElementAtOrDefault(77); // element at or default => return default value if index is out of range
+            /********************************************************************************/
+            //var result = ProductsList.Single(p => p.ProductID == 1);
+            // if sequence contains  only one element match condition -> return the element 
+            // if no element match condition => throw exception [sequence empty ,sequence conation more than one element match condtion]
+            ///// SingleOrDefault 
+            //var result = ProductsList.SingleOrDefault(P => P.UnitPrice == 9999999);
+            //Console.WriteLine(result);
+            // if sequence contains no element match condition => return default value Null
+            // if sequence contains more than one element match condition => throw exception
+            // if sequence contains only one element match condition => return the element
+
 
             #endregion
             #endregion
