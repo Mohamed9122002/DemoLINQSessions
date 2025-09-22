@@ -251,6 +251,39 @@ namespace DemoLINQ
             //               where disPrice < 10
             //               select disPrice;
             #endregion
+            #region  Grouping Operators
+
+            // Query syntax 
+            //var result = from p in ProductsList
+            //             where p.UnitsInStock > 0
+            //             group p by p.Category
+            //             into Categories
+            //             where Categories.Count() > 10
+            //             select new
+            //             {
+            //                 CategoryName = Categories.Key,
+            //                 Count = Categories.Count(),
+            //             };
+
+            //foreach (var item in result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //// Fluent Syntax 
+            //var result = ProductsList.Where(p => p.UnitsInStock > 0)
+            //     .GroupBy(p => p.Category)
+            //     .Where(C => C.Count() > 10);
+            //foreach (var Category in result)
+            //{
+            //    Console.WriteLine(Category.Key);
+            //    foreach (var item in Category)
+            //    {
+            //        Console.WriteLine($"\t {item}");
+            //    }
+            //}
+            //// Second overload GroupBy method second Paramter IEqualityComparer<T> => Custome Comparer
+           
+            #endregion
             #endregion
         }
     }
